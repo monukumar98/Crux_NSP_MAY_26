@@ -1,11 +1,14 @@
-package Lec1;
+package Lec2;
+import java.util.*;
+public class Pattern27 {
 
-public class Pattern12 {
 	public static void main(String[] args) {
-		int n = 5;
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner(System.in);
+		int n =sc.nextInt();
 		int row = 1;
 		int star = 1;
-		int space = n - 1;
+		int space = n-1;
 		while (row <= n) {
 			// sapce
 			int i = 1;
@@ -14,21 +17,24 @@ public class Pattern12 {
 				i++;
 			}
 			// star
+			int val=1;
 			int j = 1;
 			while (j <= star) {
-				if (j % 2 != 0) {
-					System.out.print("* ");
-				} 
+				System.out.print(val+" ");
+				if(j<star/2+1) {
+				val++;
+				}
 				else {
-					System.out.print("! ");
+					val--;
 				}
 				j++;
 			}
 			// next line ki prep
 			row++;
 			System.out.println();
-			star += 2;
+			star+=2;
 			space--;
 		}
 	}
+
 }
